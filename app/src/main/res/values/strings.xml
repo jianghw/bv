@@ -5,4 +5,11 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="edit_title_manger">管理员</string>
+    <string name="app_btn_login">登录</string>
+  <!--  &#160;&#160;&#160;&#160;-->
+    <string name="edit_title_password">密&#160;&#160;&#160;&#160;码</string>
+    <string name="cb_memory_password">记住密码</string>
+    <string name="tv_forgive_password">忘记密码</string>
+    <string name="tv_offline_login">离线登录</string>
 </resources>

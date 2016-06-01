@@ -3,4 +3,25 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="jhwPrimary">#2bcd85</color>
+    <color name="jhwPrimaryDark">#156542</color>
+    <color name="jhwAccent">#FF4081</color>
+    <color name="jhwWhite">#FFFFFF</color>
+    <!--字体颜色-->
+    <color name="textNormal">#434343</color>
+    <!--正常输入框的颜色-->
+    <color name="colorControlNormal">#c0c0c0</color>
+    <color name="windowBackground">#434343</color>
+
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
 </resources>

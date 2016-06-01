@@ -9,7 +9,7 @@ import com.caijy.jhwei.bv.R;
 /**
  * Created by jhwei on 2016/5/30.
  */
-public abstract class AppActivity extends BaseActivity {
+public abstract class SameTypeActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public abstract class AppActivity extends BaseActivity {
 
         setContentView(getContentViewID());
         if (null != getIntent()) handleIntent(getIntent());
+
         if (null == getSupportFragmentManager().getFragments()) {
             BaseFragment fragment = getFirstFragment();
             if (null != fragment) addFragment(fragment);
@@ -25,7 +26,7 @@ public abstract class AppActivity extends BaseActivity {
     }
 
     private int getContentViewID() {
-        return R.layout.activity_app;
+        return R.layout.activity_flow_type;
     }
 
     protected abstract BaseFragment getFirstFragment();

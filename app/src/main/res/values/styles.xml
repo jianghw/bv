@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -16,5 +16,33 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="AppTheme.Jhw.Login" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/jhwPrimary</item>
+        <item name="colorPrimaryDark">@color/jhwPrimaryDark</item>
+        <item name="colorAccent">@color/jhwAccent</item>
+
+        <item name="android:windowBackground">@color/windowBackground</item>
+
+        <item name="colorControlNormal">@color/colorControlNormal</item>
+        <!--输入框获焦-->
+        <item name="colorControlActivated">@color/jhwPrimary</item>
+        <!--控件按下效果-->
+        <item name="colorControlHighlight">@color/jhwPrimaryDark</item>
+        <item name="android:textColorHint">@color/colorControlNormal</item>
+
+        <item name="colorButtonNormal">@color/jhwPrimaryDark</item>
+        <item name="android:colorButtonNormal" tools:targetApi="LOLLIPOP">@color/jhwPrimary</item>
+    </style>
+
+    <style name="TextViewNormal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/layout_marginLeft_double</item>
+        <item name="android:layout_marginRight">@dimen/layout_marginLeft_double</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textSize_normal</item>
+    </style>
 
 </resources>

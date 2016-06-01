@@ -6,4 +6,16 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--三分之一的宽-->
+    <dimen name="aty_third_width">853px</dimen>
+
+    <!--上下行的间距 16dp-->
+    <dimen name="layout_marginTop_first">16dp</dimen>
+    <!--控件左的间距 8dp-->
+    <dimen name="layout_marginLeft">8dp</dimen>
+    <dimen name="layout_marginLeft_double">16dp</dimen>
+
+    <!--字体大小-->
+    <dimen name="textSize_normal">16sp</dimen>
 </resources>
