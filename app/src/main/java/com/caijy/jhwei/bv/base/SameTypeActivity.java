@@ -16,6 +16,7 @@ public abstract class SameTypeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(getContentViewID());
+
         if (null != getIntent()) handleIntent(getIntent());
 
         if (null == getSupportFragmentManager().getFragments()) {
@@ -26,7 +27,7 @@ public abstract class SameTypeActivity extends BaseActivity {
     }
 
     private int getContentViewID() {
-        return R.layout.activity_flow_type;
+        return R.layout.activity_same_type;
     }
 
     protected abstract BaseFragment getFirstFragment();

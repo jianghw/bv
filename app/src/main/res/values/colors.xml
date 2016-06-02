@@ -8,11 +8,13 @@
     <color name="jhwPrimaryDark">#156542</color>
     <color name="jhwAccent">#FF4081</color>
     <color name="jhwWhite">#FFFFFF</color>
+
     <!--字体颜色-->
     <color name="textNormal">#434343</color>
     <!--正常输入框的颜色-->
     <color name="colorControlNormal">#c0c0c0</color>
-    <color name="windowBackground">#434343</color>
+    <!--背景颜色-->
+    <color name="windowBackground">#FFFFFF</color>
 
 
     <color name="black">#000000</color>

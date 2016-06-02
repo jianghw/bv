@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.caijy.jhwei.bv.R;
+import butterknife.ButterKnife;
 
 /**
  * Created by jhwei on 2016/5/30.
@@ -17,6 +17,8 @@ public abstract class FlowTypeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(getContentViewID());
+        ButterKnife.bind(this);
+
         if (null != getIntent()) handleIntent(getIntent());
 
         if (null == getSupportFragmentManager().getFragments()) {
@@ -26,16 +28,18 @@ public abstract class FlowTypeActivity extends BaseActivity {
 
     }
 
-    private int getContentViewID() {
-        return R.layout.activity_flow_type;
-    }
+    protected abstract int getContentViewID();
 
     protected void handleIntent(Intent intent) {}
 
     protected abstract BaseFragment getFirstFragment();
 
     @Override
-    protected int getFragmentContentID() {
-        return R.id.aty_fgt_container;
+    protected abstract int getFragmentContentID();
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ButterKnife.unbind(this);
     }
 }

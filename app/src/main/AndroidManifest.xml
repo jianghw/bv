@@ -16,7 +16,7 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".pedestal.LoginActivity"
             android:label="@string/app_name"
             android:configChanges="keyboardHidden|screenSize|orientation"
             android:screenOrientation="landscape"

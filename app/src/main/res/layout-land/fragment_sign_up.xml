@@ -11,12 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/jhwPrimary"
-        android:minHeight="?attr/actionBarSize">
+        android:minHeight="?attr/actionBarSize"
+        toolbar:navigationIcon="@drawable/ic_title_back">
 
         <TextView
             style="@style/TextTitle"
             android:layout_gravity="center"
-            android:text="@string/toolbar_title_login"/>
+            android:text="@string/toolbar_title_sign_up"/>
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
@@ -34,11 +35,11 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/edit_manager"
+                    android:id="@+id/edit_account"
                     style="@style/TextNormal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/edit_title_manger"
+                    android:hint="@string/edit_title_account"
                     android:inputType="text"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -55,52 +56,52 @@
                     android:inputType="text"/>
             </android.support.design.widget.TextInputLayout>
 
-            <LinearLayout
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/layout_marginTop_first"
-                android:gravity="center"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:id="@+id/cb_remember_pw"
-                    style="@style/TextViewNormal"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:button="@drawable/cb_password_selector"
-                    android:checked="false"
-                    android:paddingLeft="@dimen/layout_marginLeft"
-                    android:text="@string/cb_memory_password"/>
+                <EditText
+                    android:id="@+id/edit_name"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_title_name"
+                    android:inputType="text"/>
+            </android.support.design.widget.TextInputLayout>
 
-                <TextView
-                    android:id="@+id/tv_forgive_pw"
-                    style="@style/TextViewNormal"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/tv_forgive_password"/>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/tv_offline"
-                    style="@style/TextViewNormal"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/tv_offline_login"/>
-            </LinearLayout>
+                <EditText
+                    android:id="@+id/edit_email"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_title_email"
+                    android:inputType="textEmailAddress"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_phone"
+                    style="@style/TextNormal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_title_phone"
+                    android:inputType="phone"/>
+            </android.support.design.widget.TextInputLayout>
+
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_marginTop_first"
-                android:text="@string/btn_login"/>
-
-            <TextView
-                android:id="@+id/tv_sign_up"
-                style="@style/TextViewNormal"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/layout_marginTop_first"
-                android:text="@string/tv_sign_in"/>
+                android:text="@string/btn_sign_up"/>
         </com.zhy.autolayout.AutoLinearLayout>
     </RelativeLayout>
 </LinearLayout>

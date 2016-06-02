@@ -6,10 +6,22 @@
 
     <string name="action_settings">Settings</string>
     <string name="edit_title_manger">管理员</string>
-    <string name="app_btn_login">登录</string>
-  <!--  &#160;&#160;&#160;&#160;-->
+    <string name="btn_login">登录</string>
+    <!--  &#160;&#160;&#160;&#160;-->
     <string name="edit_title_password">密&#160;&#160;&#160;&#160;码</string>
     <string name="cb_memory_password">记住密码</string>
     <string name="tv_forgive_password">忘记密码</string>
     <string name="tv_offline_login">离线登录</string>
+    <string name="tv_sign_in">注册账号</string>
+    <string name="toolbar_title_login">POCT数据管理工作站</string>
+    <string name="edit_prompt_number">请输入不少于6位的信息</string>
+    <string name="send_net_request">数据加载中,请稍等…</string>
+    <string name="edit_title_account">账&#160;&#160;&#160;&#160;户</string>
+    <string name="edit_title_name">姓&#160;&#160;&#160;&#160;名</string>
+    <string name="edit_title_email">邮&#160;&#160;&#160;&#160;箱</string>
+    <string name="edit_title_phone">手机号</string>
+    <string name="btn_sign_up">注册</string>
+    <string name="toolbar_title_sign_up">管理员注册</string>
+    <string name="title_back">回退</string>
+
 </resources>

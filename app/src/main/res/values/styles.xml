@@ -17,12 +17,13 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-
+    <!--登陆页样式，自己看-->
     <style name="AppTheme.Jhw.Login" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/jhwPrimary</item>
         <item name="colorPrimaryDark">@color/jhwPrimaryDark</item>
         <item name="colorAccent">@color/jhwAccent</item>
 
+        <item name="android:windowFullscreen">true</item>
         <item name="android:windowBackground">@color/windowBackground</item>
 
         <item name="colorControlNormal">@color/colorControlNormal</item>
@@ -31,18 +32,31 @@
         <!--控件按下效果-->
         <item name="colorControlHighlight">@color/jhwPrimaryDark</item>
         <item name="android:textColorHint">@color/colorControlNormal</item>
-
-        <item name="colorButtonNormal">@color/jhwPrimaryDark</item>
+        <!--Button按钮正常状态颜色-->
+        <item name="colorButtonNormal">@color/jhwPrimary</item>
         <item name="android:colorButtonNormal" tools:targetApi="LOLLIPOP">@color/jhwPrimary</item>
     </style>
-
-    <style name="TextViewNormal">
+    <!--textView上正常字体-->
+    <style name="TextViewNormal" parent="TextNormal">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">@dimen/layout_marginLeft_double</item>
         <item name="android:layout_marginRight">@dimen/layout_marginLeft_double</item>
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/textSize_normal</item>
+    </style>
+
+    <style name="TextNormal">
+        <item name="android:textColor">@color/textNormal</item>
+        <item name="android:textSize">@dimen/textSize_normal</item>
+    </style>
+    <!--大标题上正常字体-->
+    <style name="TextTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textSize_title</item>
     </style>
 
 </resources>
