@@ -19,6 +19,7 @@ import com.caijy.jhwei.bv.presenter.LoginPresenter;
 import com.caijy.jhwei.bv.util.AnimationUtils;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -27,6 +28,8 @@ import butterknife.OnClick;
  */
 public class LoginFragment extends BaseFragment implements ILoginContract.ILoginView {
 
+    @Bind(R.id.tv_toolbar)
+    TextView mTvToolbar;
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
     @Bind(R.id.edit_manager)
@@ -39,11 +42,10 @@ public class LoginFragment extends BaseFragment implements ILoginContract.ILogin
     TextView mTvForgivePw;
     @Bind(R.id.tv_offline)
     TextView mTvOffline;
-    @Bind(R.id.tv_sign_up)
-    TextView mTvSignIn;
     @Bind(R.id.btn_login)
     AppCompatButton mBtnLogin;
-
+    @Bind(R.id.tv_sign_up)
+    TextView mTvSignUp;
     private ILoginContract.ILoginPresenter mPresenter;
 
     public static BaseFragment newInstance() {
@@ -64,6 +66,7 @@ public class LoginFragment extends BaseFragment implements ILoginContract.ILogin
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         mToolbar.setTitle("");
+        mTvToolbar.setText(getString(R.string.toolbar_title_login));
         mActivity.setSupportActionBar(mToolbar);
 
         isTakePasswordShow();
@@ -112,14 +115,21 @@ public class LoginFragment extends BaseFragment implements ILoginContract.ILogin
     @OnClick(R.id.btn_login)
     public void onSubmitLogin() {
         mPresenter.onSubmitLogin();
+        //        startActivity(new Intent(mActivity, JhwMainActivity.class));
+        addFragment(MainFragment.newInstance());
     }
 
     @OnClick({R.id.tv_offline, R.id.tv_sign_up, R.id.tv_forgive_pw})
     public void onTextView(TextView view) {
-        AnimationUtils.startShakeByPropertyAnim(view, 0.8f, 1.25f, 2f, 1000);
         switch (view.getId()) {
             case R.id.tv_sign_up:
-                addFragment(SignUpFragment.newInstance());
+                AnimationUtils.startShakeByPropertyAnim(view, 0.8f, 1.25f, 2f, 1000,
+                        new AnimationUtils.AnimationEnd() {
+                            @Override
+                            public void onStartClickEvent() {
+                                addFragment(SignUpFragment.newInstance());
+                            }
+                        });
                 break;
         }
     }
@@ -167,5 +177,11 @@ public class LoginFragment extends BaseFragment implements ILoginContract.ILogin
     @Override
     public void dismissDialog() {
 
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        ButterKnife.unbind(this);
     }
 }

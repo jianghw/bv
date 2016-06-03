@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:jhw="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:layout_behavior="@string/appbar_scrolling_view_behavior"
+              tools:showIn="@layout/bv_bar_main"
+              android:orientation="horizontal">
+
+    <com.caijy.jhwei.bv.custom.ProjectItemView
+        android:background="@drawable/bg_project_item_view"
+        android:id="@+id/project_bv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        jhw:image="@drawable/ic_bv"
+        jhw:promptText="@string/item_bv"/>
+
+    <com.caijy.jhwei.bv.custom.ProjectItemView
+        android:background="@drawable/bg_project_item_view"
+        android:id="@+id/project_rheumatoid"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        jhw:image="@drawable/ic_bv"
+        jhw:promptText="@string/item_bv"/>
+
+    <com.caijy.jhwei.bv.custom.ProjectItemView
+        android:background="@drawable/bg_project_item_view"
+        android:id="@+id/project_collaurum"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        jhw:image="@drawable/ic_bv"
+        jhw:promptText="@string/item_bv"/>
+</LinearLayout>

@@ -1,12 +1,13 @@
 package com.caijy.jhwei.bv.base;
 
-import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+
+import com.zhy.autolayout.AutoLayoutActivity;
 
 /**
  * Created by jhwei on 2016/5/30.
  */
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AutoLayoutActivity{
 
     /**
      * 添加

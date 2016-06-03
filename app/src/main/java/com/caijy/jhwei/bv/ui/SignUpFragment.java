@@ -6,10 +6,9 @@ import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.caijy.jhwei.bv.R;
 import com.caijy.jhwei.bv.base.BaseFragment;
@@ -27,6 +26,8 @@ import butterknife.OnClick;
  */
 public class SignUpFragment extends BaseFragment implements ILoginContract.ISignUpView {
 
+    @Bind(R.id.tv_toolbar)
+    TextView mTvToolbar;
     @Bind(R.id.toolbar)
     Toolbar mToolbar;
     @Bind(R.id.edit_account)
@@ -62,6 +63,8 @@ public class SignUpFragment extends BaseFragment implements ILoginContract.ISign
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         mToolbar.setTitle("");
+        mToolbar.setNavigationIcon(R.drawable.ic_title_back);
+        mTvToolbar.setText(getString(R.string.toolbar_title_sign_up));
         mActivity.setSupportActionBar(mToolbar);
 
         //        onTestInputLegitimacy(mEditManager);
@@ -182,14 +185,6 @@ public class SignUpFragment extends BaseFragment implements ILoginContract.ISign
     @Override
     public void dismissDialog() {
 
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
     }
 
     @Override

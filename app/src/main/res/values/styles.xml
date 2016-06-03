@@ -17,7 +17,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-    <!--登陆页样式，自己看-->
+    <!--登陆页样式，~看-->
     <style name="AppTheme.Jhw.Login" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/jhwPrimary</item>
         <item name="colorPrimaryDark">@color/jhwPrimaryDark</item>

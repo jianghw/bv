@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Application</string>
+    <string name="app_name">poct</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -23,5 +23,7 @@
     <string name="btn_sign_up">注册</string>
     <string name="toolbar_title_sign_up">管理员注册</string>
     <string name="title_back">回退</string>
+    <string name="toolbar_title_main">选择检测项目</string>
+    <string name="item_bv">阴道炎检测</string>
 
 </resources>

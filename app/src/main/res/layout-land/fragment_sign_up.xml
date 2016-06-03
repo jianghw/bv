@@ -1,31 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:toolbar="http://schemas.android.com/apk/res-auto"
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/jhwPrimary"
-        android:minHeight="?attr/actionBarSize"
-        toolbar:navigationIcon="@drawable/ic_title_back">
-
-        <TextView
-            style="@style/TextTitle"
-            android:layout_gravity="center"
-            android:text="@string/toolbar_title_sign_up"/>
-    </android.support.v7.widget.Toolbar>
+    <include layout="@layout/bv_toolbar_main"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.zhy.autolayout.AutoLinearLayout
-            android:layout_width="@dimen/aty_third_width"
+        <LinearLayout
+            android:layout_width="@dimen/aty_two_third_width"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:orientation="vertical">
@@ -102,6 +89,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_marginTop_first"
                 android:text="@string/btn_sign_up"/>
-        </com.zhy.autolayout.AutoLinearLayout>
+        </LinearLayout>
     </RelativeLayout>
 </LinearLayout>

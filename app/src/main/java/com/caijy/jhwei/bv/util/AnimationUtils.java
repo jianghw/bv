@@ -1,5 +1,7 @@
 package com.caijy.jhwei.bv.util;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
@@ -11,8 +13,15 @@ import android.view.View;
  */
 public class AnimationUtils {
 
+    public interface AnimationEnd {
+        void onStartClickEvent();
+    }
 
-    public static void startShakeByPropertyAnim(View view, float scaleSmall, float scaleLarge, float shakeDegrees, long duration) {
+
+    public static void startShakeByPropertyAnim(View view,
+                                                float scaleSmall, float scaleLarge,
+                                                float shakeDegrees, long duration,
+                                                final AnimationEnd animationEnd) {
         if (view == null) {
             return;
         }
@@ -49,8 +58,16 @@ public class AnimationUtils {
                 Keyframe.ofFloat(1.0f, 0f)
         );
 
-        ObjectAnimator objectAnimator = ObjectAnimator.ofPropertyValuesHolder(view, scaleXValuesHolder, scaleYValuesHolder, rotateValuesHolder);
+        ObjectAnimator objectAnimator = ObjectAnimator.ofPropertyValuesHolder(view,
+                scaleXValuesHolder, scaleYValuesHolder, rotateValuesHolder);
         objectAnimator.setDuration(duration);
+        objectAnimator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                animationEnd.onStartClickEvent();
+            }
+        });
         objectAnimator.start();
     }
 }
